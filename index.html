@@ -19,19 +19,103 @@
     </header>
     <main>
         <form id="evaluation-form" method="get">
+            <div>
+            <div>
             <input type="text" placeholder="Nome" id="input-name">
             <input type="text" placeholder="Sobrenome" id="input-lastname">
+            </div>
+            <div>
             <input type="email" placeholder="Email" id="input-email">
-            <label for="house"></label>
+            <label for="house">Casa:</label>
                 <select name="" id="house">
                     <option value="Gitnória" id="gitnoria-house">Gitnória</option>
                     <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
                     <option value="Corvinode" id="corvinode-house">Corvinode</option>
                     <option value="Pytherina" id="pytherina-house">Pytherina</option>
                 </select>
+            </div>
+            </div>
+            <div id="divPai">
+            <div id="family">
+                <p id="label-family">Qual sua família?</p>
+                <label>
+                <input type="radio" name="family" value="Frontend" checked>
+                Familia Frontend</label>
+                <label>
+                <input type="radio" name="family" value="Backend">
+                Familia Backend</label>
+                <label>
+                <input type="radio" name="family" value="FullStack">
+                Familia FullStack</label>
+            </div>
+            <div id="content">
+                <p id="label-content">Qual conteúdo você está com mais vontade de aprender?</p>
+                <label>
+                    <input type="checkbox" value="HoFs" class="subject">
+                HoFs</label>
+                <label>
+                    <input type="checkbox" value="Jest" class="subject">
+                Jest</label>
+                <label>
+                    <input type="checkbox" value="Promises" class="subject">
+                Promises</label>
+                <label>
+                    <input type="checkbox" value="React" class="subject">
+                React</label>
+                <label>
+                    <input type="checkbox" value="SQL" class="subject">
+                SQL</label>
+                <label>
+                    <input type="checkbox" value="Python" class="subject">
+                Python</label>
+            </div>
+            </div>
+            <div>
+                <label id="label-rate">Como você avalia a Trybewarts?</label>
+                <label>
+                    <input type="radio" name="rate" value="1">
+                1</label>
+                <label>
+                    <input type="radio" name="rate" value="2" checked>
+                2</label>
+                <label>
+                    <input type="radio" name="rate" value="3">
+                3</label>
+                <label>
+                    <input type="radio" name="rate" value="4">
+                4</label>
+                <label>
+                    <input type="radio" name="rate" value="5">
+                5</label>
+                <label>
+                    <input type="radio" name="rate" value="6">
+                6</label>
+                <label>
+                    <input type="radio" name="rate" value="7">
+                7</label>
+                <label>
+                    <input type="radio" name="rate" value="8">
+                8</label>
+                <label>
+                    <input type="radio" name="rate" value="9">
+                9</label>
+                <label>
+                    <input type="radio" name="rate" value="10">
+                10</label>
+            </div>
+            <br>
+            <label for="textarea" class="textarea">Deixe seu comentário:</label>
+            <textarea maxlength="500" id="textarea"></textarea>
+            <span id="counter">500</span>
+            <label for="agreement" id="label-infos">Você concorda com o uso das informações acima?</label>
+            <input type="checkbox" id="agreement" required>
+            <button type="submit" disabled id="submit-btn">Enviar</button>
         </form>
         <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg" height="500px">
     </main>
+    <footer>
+        <p>Direitos reservados à Trybewarts©</p>
+    </footer>
     <script src="./script.js"></script>
 </body>
 </html>

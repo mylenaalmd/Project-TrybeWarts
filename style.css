@@ -21,3 +21,21 @@ main {
   width: 675px;
   flex-direction: column;
 }
+
+#family {
+  display: flex;
+  flex-direction: column;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+}
+
+#divPai {
+  display: flex;
+}
+
+footer {
+  background-color: grey;
+}
