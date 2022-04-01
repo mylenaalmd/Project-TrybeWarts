@@ -8,8 +8,6 @@ const inputLastName = document.getElementById('input-lastname');
 const inputEmail = document.getElementById('input-email');
 const house = document.getElementById('house');
 const content = document.getElementById('content');
-const family = document.querySelector('input[name="family"]:checked');
-const rate = document.querySelector('input[name="rate"]:checked');
 const textArea = document.getElementById('textarea');
 const span = document.getElementById('counter');
 const button2 = document.getElementById('submit-btn');
@@ -40,6 +38,12 @@ textArea.addEventListener('input', (event) => {
   span.innerText = numeroCaracteres;
 });
 
+function createList() {
+  const list = document.createElement('ul');
+  formulario.appendChild(list);
+  return list;
+}
+
 function subjects() {
   const checkbox = content.querySelectorAll('input[type="checkbox"]:checked');
   let newString = '';
@@ -50,14 +54,15 @@ function subjects() {
 }
 
 button2.addEventListener('click', () => {
+  const family = document.querySelector('input[name="family"]:checked');
+  const rate = document.querySelector('input[name="rate"]:checked');
   const newString = subjects();
   formulario.innerHTML = '';
-  const list = document.createElement('ul');
-  formulario.appendChild(list);
+  const list = createList();
   for (let i = 0; i < 7; i += 1) {
     const li = document.createElement('li');
     const values = [
-      `Nome: ${inputName.value + inputLastName.value}`,
+      `Nome: ${inputName.value} ${inputLastName.value}`,
       `Email: ${inputEmail.value}`,
       `Casa: ${house.value}`,
       `Família: ${family.value}`,
